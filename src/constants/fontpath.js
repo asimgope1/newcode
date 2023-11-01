@@ -1,0 +1,12 @@
+export const ROBOTO_BLACK='Roboto-Black';
+export const ROBOTO_BLACKITALIC='Roboto-BlackItalic';
+export const ROBOTO_BOLD='Roboto-Bold';
+export const ROBOTO_BOLDITALIC='Roboto-BoldItalic';
+export const ROBOTO_ITALIC='Roboto-Italic';
+export const ROBOTO_LIGHT='Roboto-Light';
+export const ROBOTO_LIGHTITALIC='Roboto-LightItalic';
+export const ROBOTO_MEDIUM='Roboto-Medium';
+export const ROBOTO_MEDIUMITALIC='Roboto-MediumItalic';
+export const ROBOTO_REGULAR='Roboto-Regular';
+export const ROBOTO_THIN='Roboto-Thin';
+export const ROBOTO_THINITALIC='Roboto-ThinItalic';
