@@ -3,7 +3,7 @@ export const POSTNETWORK = async (url, payload, token = false) => {
 
     let headers = {
         'Accept': 'application/json',
-        'Content-Type':  'application/json' 
+        'Content-Type': 'application/json'
     };
     if (token) {
         let loginRes = await getObjByKey('loginResponse');
@@ -21,7 +21,7 @@ export const POSTNETWORK = async (url, payload, token = false) => {
         });
 
 }
-                                                          
+
 export const GETNETWORK = async (url, token = false) => {
 
     let headers = {
@@ -31,7 +31,7 @@ export const GETNETWORK = async (url, token = false) => {
 
     if (token) {
         let loginRes = await getObjByKey('loginResponse');
-        headers = { ...headers, Authorization:loginRes.token }
+        headers = { ...headers, Authorization: loginRes.token }
     }
     return fetch(url, {
         method: 'GET',
