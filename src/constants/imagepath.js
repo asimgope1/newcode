@@ -5,4 +5,5 @@ export const SUCCESS = require(`${assetsPath}/success.png`);
 export const LOADER = require(`${assetsPath}/loader.gif`);
 export const MENUE = require(`${assetsPath}/menue.png`);
 export const PROFILE = require(`${assetsPath}/profile.png`);
-export const LOGO = require(`${assetsPath}/logo.png`);
+export const LOGO = require(`${assetsPath}/jigyasulogo.png`);
+export const BACKGROUND = require(`${assetsPath}/background.png`);
