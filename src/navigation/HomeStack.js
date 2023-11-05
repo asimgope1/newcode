@@ -1,12 +1,6 @@
-import { createStackNavigator } from "@react-navigation/stack";
-import * as React from "react";
+import * as React from 'react';
+import DrawerStack from './DrawerStack';
 
-const Stack = createStackNavigator();
 export default HomeStack = () => {
-  return (
-    <Stack.Navigator
-      initialRouteName="Home">
-      <Stack.Screen options={{ headerShown: false }} name="Home" component={Home} />
-    </Stack.Navigator>
-  )
-}
+  return <DrawerStack />;
+};
