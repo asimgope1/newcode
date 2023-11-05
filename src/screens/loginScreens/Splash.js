@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import { Image, StatusBar, View } from "react-native";
+import { Image, ImageBackground, StatusBar, View } from "react-native";
 import { HEIGHT, MyStatusBar, WIDTH } from "../../constants/config";
-import { BLUE } from "../../constants/color";
+import { BLUE, SKIN, THEME } from "../../constants/color";
 // import LinearGradient from "react-native-linear-gradient";
-import { LOGO } from "../../constants/imagepath";
+import { BACKGROUND, LOGO } from "../../constants/imagepath";
 
 export const Splash = ({ navigation }) => {
     useEffect(() => {
@@ -15,8 +15,32 @@ export const Splash = ({ navigation }) => {
     return (
         <View
             style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <MyStatusBar backgroundColor={BLUE} barStyle={'light-content'} />
-            <View style={{
+            <MyStatusBar backgroundColor={'transparent'} barStyle={'light-content'} />
+            <ImageBackground
+            style={{
+                height:HEIGHT,
+                width:WIDTH,
+                justifyContent:'center',
+                alignItems:'center'
+            }}
+            source={BACKGROUND}
+            
+            >
+                <Image
+                resizeMode="contain"
+                    style={{
+                        // borderRadius: 100,
+
+                        height: '60%',
+                        width: '60%'
+                    }}
+                    source={LOGO}
+                /> 
+            </ImageBackground>
+
+
+            
+            {/* <View style={{
                 elevation: 15
             }}>
                 <Image
@@ -27,7 +51,7 @@ export const Splash = ({ navigation }) => {
                     }}
                     source={LOGO}
                 />
-            </View>
+            </View> */}
         </View>
     );
 }
