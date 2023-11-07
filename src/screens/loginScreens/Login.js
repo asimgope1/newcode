@@ -149,7 +149,7 @@ export default Login = ({navigation}) => {
         <CustomBtn
         height={45}
         onTouch={()=>{
-          navigation.navigate('Dashboard')
+          navigation.navigate('HomeStack')
         }}
         text='Login'
         />

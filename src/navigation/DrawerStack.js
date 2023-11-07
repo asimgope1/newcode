@@ -8,7 +8,7 @@ const Drawer = createDrawerNavigator();
 export default function DrawerStack() {
   return (
     <Drawer.Navigator initialRouteName='Dashboard'>
-      <Drawer.Screen name="Dashboard" component={Dashboard} />
+      <Drawer.Screen name="Dashboard" component={Dashboard} options={{ headerShown: false }}/>
     </Drawer.Navigator>
   );
 }

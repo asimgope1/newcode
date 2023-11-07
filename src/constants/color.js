@@ -8,5 +8,6 @@ export const DARKBLUE = '#046c88';
 export const SKIN = '#f5ede0';
 export const TEXT = '#2D6882';
 export const GREY = '#545454';
+export const HEADERCOLOR = '#E36863';
 
 
