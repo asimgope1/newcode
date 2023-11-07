@@ -15,6 +15,7 @@ export const InputTxt = ({
     borderColor = PINK,
     maxLength = 100,
     onTouch = "",
+    Head=""
 }) => {
     const [tap, setTap] = useState(false);
 
@@ -30,7 +31,7 @@ export const InputTxt = ({
             {
                 (tap || inputdata != "") &&
                 <View style={{ ...Styles.lablebackgroud }} >
-                    <Text style={{ ...Styles.lable }}>{placeholder}</Text>
+                    <Text style={{ ...Styles.lable }}>{Head}</Text>
                 </View>
             }
             <View style={{ flexDirection: 'row', flex: 1 }}>
@@ -99,8 +100,8 @@ export const InputTxt = ({
 }
 const Styles = StyleSheet.create({
     container: {
-        height: 60,
-        width: WIDTH * 0.8,
+        height: 50,
+        width: WIDTH * 0.9,
         backgroundColor: WHITE,
         borderRadius: 15,
         borderWidth: 1,

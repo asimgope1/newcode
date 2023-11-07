@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, Pressable, View } from "react-native";
-import { BLACK, WHITE } from "../constants/color";
+import { BLACK, ORANGE, WHITE } from "../constants/color";
 import { WIDTH } from "../constants/config";
 import {  ROBOTO_BOLD, } from "../constants/fontpath";
 
@@ -8,8 +8,8 @@ export const CustomBtn = ({
     text = "",
     onTouch,
     width = WIDTH * 0.9,
-    backgroundColor = "#fec520",
-    height = 60,
+    backgroundColor = ORANGE,
+    height = '',
     borderColor = WHITE
 }) => {
     return (
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     button: {
         alignItems: 'center',
         justifyContent: 'center',
-        borderRadius: 15,
+        borderRadius: 8,
         marginTop: 20,
     },
     buttonText: {
