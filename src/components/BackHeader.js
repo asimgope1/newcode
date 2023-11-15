@@ -1,10 +1,11 @@
-import { View, Text ,Image} from 'react-native'
+import { View, Text ,Image,Pressable} from 'react-native'
 import React from 'react'
 import { BACKARROW } from '../constants/imagepath'
 import { HEADERCOLOR } from '../constants/color'
 
 const BackHeader = ({
-    Header=''
+    Header='',
+    onPress=''
 }) => {
   return (
     <View
@@ -27,10 +28,14 @@ const BackHeader = ({
 
      }}
      >
+        <Pressable
+        onPress={onPress}
+        >
      <Image
      source={BACKARROW}
      resizeMode='center'
      />
+     </Pressable>
      </View>
      <Text
      style={{

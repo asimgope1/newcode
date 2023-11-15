@@ -1,187 +1,108 @@
-import { View, Text ,Image,FlatList} from 'react-native'
-import React from 'react'
+import { View, Text, FlatList } from 'react-native';
+import React from 'react';
 import { MyStatusBar } from '../../../constants/config';
-import Header from '../../../components/Header';
-import { HEADERCOLOR } from '../../../constants/color';
-import { BACKARROW } from '../../../constants/imagepath';
 import BackHeader from '../../../components/BackHeader';
+import { HEADERCOLOR } from '../../../constants/color';
 
-const ChapterInfo = ({navigation}) => {
-  const data=[
+const ChapterInfo = ({ navigation }) => {
+  const data = [
     {
-      chapter:'Chapter 1',
-      time:'10:00'
+      chapter: 'Chapter 1',
+      time: '10:00',
     },
     {
-      chapter:'Chapter 2',
-      time:'10:00'
+      chapter: 'Chapter 2',
+      time: '10:00',
     },
     {
-      chapter:'Chapter 3',
-      time:'10:00'
+      chapter: 'Chapter 3',
+      time: '10:00',
     },
     {
-      chapter:'Chapter 4',
-      time:'10:00'
+      chapter: 'Chapter 4',
+      time: '10:00',
     },
     {
-      chapter:'Chapter 5',
-      time:'10:00'
+      chapter: 'Chapter 5',
+      time: '10:00',
     },
     {
-      chapter:'Chapter 6',
-      time:'10:00'
+      chapter: 'Chapter 6',
+      time: '10:00',
     },
-    {
-      chapter:'Chapter 7',
-      time:'10:00'
-    },
-    {
-      chapter:'Chapter 8',
-      time:'10:00'
-    },
-    {
-      chapter:'Chapter 9',
-      time:'10:00'
-    },
-    {
-      chapter:'Chapter 10',
-      time:'10:00'
-    },
-    {
-      chapter:'Chapter 11',
-      time:'10:00'
-    },
-    {
-      chapter:'Chapter 12',
-      time:'10:00'
-    },
-    {
-      chapter:'Chapter 13',
-      time:'10:00'
-    },
-    {
-      chapter:'Chapter 14',
-      time:'10:00'
-    },
-    {
-      chapter:'Chapter 15',
-      time:'10:00'
-    },
-    {
-      chapter:'Chapter 16',
-      time:'10:00'
-    },
-    {
-      chapter:'Chapter 17',
-      time:'10:00'
-    },
-    {
-      chapter:'Chapter 18',
-      time:'10:00'
-    },
-    {
-      chapter:'Chapter 19',
-      time:'10:00'
-    },
-    {
-      chapter:'Chapter 20',
-      time:'10:00'
-    },
-    {
-      chapter:'Chapter 21',
-      time:'10:00'
-    },
-    {
-      chapter:'Chapter 22',
-      time:'10:00'
-    },
-    {
-      chapter:'Chapter 23',
-      time:'10:00'
-    },
-    {
-      chapter:'Chapter 24',
-      time:'10:00'
-    },
-    {
-      chapter:'Chapter 25',
-      time:'10:00'
-    },
-    {
-      chapter:'Chapter 26',
-      time:'10:00'
-    },
-    {
-      chapter:'Chapter 27',
-      time:'10:00'
-    },
-    {
-      chapter:'Chapter 28',
-      time:'10:00'
-    }
+  ];
 
-  ]
-  return (
-    <View
-    style={{
-      flex:1
-    }}
-    >
-         <MyStatusBar backgroundColor={HEADERCOLOR} barStyle={'light-content'} />
-      <BackHeader
-      Header='Subject'
-      />
-      <View>
-        <Text
+  const chapterView = ({ item }) => {
+    return (
+      <View
         style={{
-          fontSize:18,
-          fontWeight:'bold',
-          margin:'5%'
-        }}
-        >
-          Chapter No
-        </Text>
-        <FlatList
-        data={data}
-        renderItem={({item})=>{
-          return(
-            <View
+          marginTop: 20,
+          width: '95%',
+          height: 200, // Set a specific height for each item
+          backgroundColor: 'white',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignSelf: 'center',
+          // alignItems: 'center',
+          borderRadius: 6,
+        }}>
+          <View
+          style={{
+            width:'100%',
+            height:'35%',
+            // backgroundColor:'red'
+          }}
+          >
+
+          </View>
+      
+      
+   
+      </View>
+    );
+  };
+
+  const listfooter=()=>{
+    return(
+      <View
+      style={{
+        width:'100%',
+        height:20
+      }}
+      >
+
+      </View>
+    )
+  }
+
+  return (
+    <View style={{ flex: 1 }}>
+      <MyStatusBar backgroundColor={HEADERCOLOR} barStyle={'light-content'} />
+      <BackHeader Header="Subject"
+      onPress={
+        ()=>{
+          navigation.goBack()
+        }
+      }
+      />
+      <View style={{ flex: 1, }}>
+        <View>
+          <Text
             style={{
-              width:'90%',
-              height:'35%',
-              alignSelf:'center',
-              flexDirection:'row',
-              // backgroundColor:'red',
-              justifyContent:'space-between',
-              alignItems:'center',
-              margin:'2%'
-            }}
-            >
-              <Text
-              style={{
-                fontSize:16,
-                fontWeight:'bold'
-              }}
-              >
-                {item.chapter}
-              </Text>
-              <Text
-              style={{
-                fontSize:16,
-                fontWeight:'bold'
-              }}
-              >
-                {item.time}
-              </Text>
-            </View>
-          )
-        }}
-        />
-       
+              fontSize: 18,
+              fontWeight: 'bold',
+              marginTop: 20,
+              marginLeft: 18,
+              color: 'black',
+            }}>
+            CHAPTER No.
+          </Text>
+        </View>
+        <FlatList data={data} renderItem={chapterView} keyExtractor={(item) => item.chapter} ListFooterComponent={listfooter} />
+        
       </View>
     </View>
-  )
-}
+  );
+};
 
-export default ChapterInfo
+export default ChapterInfo;
