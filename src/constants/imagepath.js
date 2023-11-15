@@ -13,3 +13,4 @@ export const ACTIVITIES = require(`${assetsPath}/activities.png`);
 export const ORDERS = require(`${assetsPath}/orders.png`);
 export const PACKAGES = require(`${assetsPath}/packages.png`);
 export const PACKAGE = require(`${assetsPath}/package.png`);
+export const BACKARROW = require(`${assetsPath}/backarrow.png`);

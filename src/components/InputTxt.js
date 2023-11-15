@@ -15,7 +15,8 @@ export const InputTxt = ({
     borderColor = PINK,
     maxLength = 100,
     onTouch = "",
-    Head=""
+    Head="",
+
 }) => {
     const [tap, setTap] = useState(false);
 
@@ -101,7 +102,7 @@ export const InputTxt = ({
 const Styles = StyleSheet.create({
     container: {
         height: 50,
-        width: WIDTH * 0.9,
+        width: WIDTH * 0.9 ,
         backgroundColor: WHITE,
         borderRadius: 15,
         borderWidth: 1,

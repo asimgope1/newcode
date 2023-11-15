@@ -4,11 +4,13 @@ import { GREY } from '../constants/color'
 
 const Chapters = ({
     question='',
-    chapter=''
+    chapter='',
+    onPress=''
 }) => {
   return (
   
     <Pressable
+    onPress={onPress}
     style={{
       borderWidth: 1,
       borderColor: GREY,
