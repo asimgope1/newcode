@@ -15,7 +15,7 @@ export const InputTxt = ({
     borderColor = PINK,
     maxLength = 100,
     onTouch = "",
-    Head="",
+    Head = "",
 
 }) => {
     const [tap, setTap] = useState(false);
@@ -102,14 +102,14 @@ export const InputTxt = ({
 const Styles = StyleSheet.create({
     container: {
         height: 50,
-        width: WIDTH * 0.9 ,
+        width: WIDTH * 0.9,
         backgroundColor: WHITE,
         borderRadius: 15,
         borderWidth: 1,
-        elevation: 5
+        elevation: 2
     }, lable: {
         color: BLACK,
-        fontFamily:ROBOTO_MEDIUMITALIC
+        fontFamily: ROBOTO_MEDIUMITALIC
     }, lablebackgroud: {
         backgroundColor: WHITE,
         top: -10,
@@ -128,6 +128,6 @@ const Styles = StyleSheet.create({
         flex: 1,
         marginLeft: 10,
         color: BLACK,
-        fontFamily:ROBOTO_REGULAR
+        fontFamily: ROBOTO_REGULAR
     }
 })

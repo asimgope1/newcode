@@ -8,14 +8,14 @@ import {
   KeyboardAvoidingView,
   Pressable,
 } from 'react-native';
-import {MyStatusBar} from '../../constants/config';
-import {GREY, ORANGE, TEXT} from '../../constants/color';
-import {BACKGROUND, LOGO} from '../../constants/imagepath';
-import {ROBOTO_MEDIUM} from '../../constants/fontpath';
-import {InputTxt} from '../../components/InputTxt';
+import { MyStatusBar } from '../../constants/config';
+import { GREY, ORANGE, TEXT } from '../../constants/color';
+import { BACKGROUND, LOGO } from '../../constants/imagepath';
+import { ROBOTO_MEDIUM } from '../../constants/fontpath';
+import { InputTxt } from '../../components/InputTxt';
 import { CustomBtn } from '../../components/CustomBtn';
 
-export default Login = ({navigation}) => {
+export default Login = ({ navigation }) => {
   const [email, setEmail] = React.useState();
   const [password, setPassword] = React.useState();
   return (
@@ -27,12 +27,12 @@ export default Login = ({navigation}) => {
       }}
       source={BACKGROUND}>
       <ScrollView
-      showsVerticalScrollIndicator={false}
+        showsVerticalScrollIndicator={false}
         style={{
           flex: 1,
         }}
         contentContainerStyle={{
-          justifyContent: 'center',
+          // justifyContent: 'center',
           alignItems: 'center',
         }}>
         <Image
@@ -121,8 +121,8 @@ export default Login = ({navigation}) => {
               height: '10%',
               width: '30%',
               marginLeft: '68%',
-              marginTop:'2%',
-              marginBottom:'5%'
+              marginTop: '2%',
+              marginBottom: '5%'
             }}>
             <Text
               style={{
@@ -135,24 +135,24 @@ export default Login = ({navigation}) => {
             </Text>
           </View>
 
-        
+
         </View>
         <View
-        style={{
-            height:'5%',
-            width:'100%',
-            justifyContent:'center',
-            alignItems:'center',
-            marginBottom:'10%'
-        }}
+          style={{
+            height: '5%',
+            width: '100%',
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginBottom: '10%'
+          }}
         >
-        <CustomBtn
-        height={45}
-        onTouch={()=>{
-          navigation.navigate('HomeStack')
-        }}
-        text='Login'
-        />
+          <CustomBtn
+            height={45}
+            onTouch={() => {
+              navigation.navigate('HomeStack')
+            }}
+            text='Login'
+          />
         </View>
       </ScrollView>
     </ImageBackground>
