@@ -51,6 +51,7 @@ const ChapterInfo = ({ navigation }) => {
             width:'100%',
             height:'35%',
             // backgroundColor:'red'
+            
           }}
           >
 

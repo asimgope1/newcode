@@ -14,10 +14,21 @@ import {BACKGROUND, LOGO} from '../../constants/imagepath';
 import {ROBOTO_MEDIUM} from '../../constants/fontpath';
 import {InputTxt} from '../../components/InputTxt';
 import { CustomBtn } from '../../components/CustomBtn';
+import { GETNETWORK } from '../../utils/Network';
+import { BASEURL } from '../../utils/Url';
 
 export default Login = ({navigation}) => {
   const [email, setEmail] = React.useState();
   const [password, setPassword] = React.useState();
+
+  const verifymail=()=>{
+  const url=`${BASEURL}mob/verifyEmail/${email}`
+GETNETWORK(url).then(res=>{
+  console.log('res',res)
+})
+
+
+  }
   return (
     <ImageBackground
       style={{
@@ -107,13 +118,13 @@ export default Login = ({navigation}) => {
               marginTop: '5%',
               // marginBottom:'5%'
             }}>
-            <InputTxt
+            {/* <InputTxt
               placeholder="Enter your password"
               Head="Password"
               type="password"
               setInputdata={setPassword}
               inputdata={password}
-            />
+            /> */}
           </View>
 
           <View
@@ -149,9 +160,10 @@ export default Login = ({navigation}) => {
         <CustomBtn
         height={45}
         onTouch={()=>{
-          navigation.navigate('HomeStack')
+          verifymail()
+          
         }}
-        text='Login'
+        text='Verify'
         />
         </View>
       </ScrollView>
