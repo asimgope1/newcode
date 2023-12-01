@@ -104,63 +104,6 @@ const Login = ({ navigation }) => {
     </View>
   );
 
-  // const renderOtpView = () => (
-  //   <View style={{ flex: 1, marginTop: '75%' }}>
-  //     <View
-  //       style={{
-  //         height: '20%',
-  //         width: '100%',
-  //         borderRadius: 4,
-  //         marginBottom: '5%',
-  //       }}
-  //     >
-
-  //       <Text
-  //         style={{
-  //           fontSize: 21,
-  //           fontWeight: 'bold',
-  //           color: 'black',
-  //           fontFamily: 'Roboto-Medium',
-  //         }}
-  //       >
-  //         OTP
-  //       </Text>
-  //       <View
-  //         style={{
-  //           width: '100%',
-  //           marginTop: '3%',
-  //         }}
-  //       >
-  //         <Text
-  //           style={{
-  //             fontSize: 12,
-  //             fontWeight: '700',
-  //             color: 'black',
-  //             fontFamily: 'Roboto-Medium',
-  //           }}
-  //         >
-  //           Enter the OTP sent to your email
-  //         </Text>
-  //       </View>
-  //     </View>
-  //     <View
-  //       style={{
-  //         height: '20%',
-  //         width: '100%',
-  //         marginTop: '3%',
-  //       }}
-  //     >
-  //       <InputTxt
-  //         placeholder="Enter your OTP"
-  //         Head="OTP"
-  //         type="number"
-  //         setInputdata={setOtp}
-  //         inputdata={otp}
-  //       />
-  //     </View>
-  //     {/* Other OTP view inputs */}
-  //   </View>
-  // );
 
 
   const renderOtpView = () => {
