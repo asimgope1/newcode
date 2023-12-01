@@ -56,6 +56,7 @@ const Packages = ({navigation}) => {
               fontWeight: 'bold',
               alignSelf: 'center',
               marginTop: 20,
+              color:'black'
             }}>
             No Packages
           </Text>
@@ -67,6 +68,8 @@ const Packages = ({navigation}) => {
             alignItems:'center',
             textAlign:'center',
             marginTop: 10,
+            color:'black'
+
           }}
           >
             Looks like You have not created any packages yet
